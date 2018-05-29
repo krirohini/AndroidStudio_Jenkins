@@ -1,0 +1,53 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        maven {
+            url "http://jcenter.bintray.com/"
+        }
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        //testImplementation 'org.assertj:assertj-core:2.0.0'
+        //testImplementation 'org.testng:testng:6.9.10'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url "http://jcenter.bintray.com/"
+        }
+        google()
+    }
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+task testNG(type: Test) {
+    useTestNG() {
+        // useDefaultListeners = true
+        //outputDirectory = file("./src/Report/reports.html")
+        /// outputDirectory = file(".//reports.html")
+        //reports.html = file("./src/Report")
+        /// suiteXmlFiles << new File ("//Users//r.kumari//kp_automation_rohini//kp_automation//SamsungHeartwise//app//src//testng.xml")
+
+
+    }
+}
+
+tasks.withType(Test) {
+    testLogging {
+        exceptionFormat "full"
+        events "started", "skipped", "passed", "failed"
+        showStandardStreams true
+    }
+}
