@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+    <test name="Report_Demo">
+        <classes>
+            <class name="com.example.rkumari.reportdemo.ExampleUnitTest">
+                <methods>
+                    <include name="addition_isCorrect"/>
+                </methods>
+            </class> <!-- com.example.rkumari.reportdemo.ExampleUnitTest -->
+        </classes>
+    </test> <!-- Report_Demo -->
+</suite> <!-- Default Suite -->
