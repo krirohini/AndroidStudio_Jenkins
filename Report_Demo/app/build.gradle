@@ -26,7 +26,7 @@ task testNG(type: Test){
         useDefaultListeners = true
         reports.html.enabled = false
 
-        suiteXmlFiles << new File('/Users/r.kumari/Library/Caches/AndroidStudio3.0/temp-testng-customsuite.xml')
+        suiteXmlFiles << new File('./app/src/testng-results.xml')
     }
 }
 
